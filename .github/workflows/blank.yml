@@ -50,22 +50,22 @@ jobs:
           echo "start autobuild"
           ./autobuild-ng.sh ${{ matrix.arch }}
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: packages
           path: build/iglunix/pkgs.tar.zst
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: kernel
           path: build/vmlinuz
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: initrd
           path: build/initrd.cpio
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: boot-disk
           path: build/disk.img
